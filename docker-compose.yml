@@ -1,0 +1,516 @@
+version: '3.8'
+
+services:
+  node1:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node1
+    networks:
+      - blockchain_network
+    ports:
+      - "5001:5000"
+    environment:
+      - NODE_ID=1
+      - PEERS=http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node2
+    networks:
+      - blockchain_network
+    ports:
+      - "5002:5000"
+    environment:
+      - NODE_ID=2
+      - PEERS=http://node1:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node3:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node3
+    networks:
+      - blockchain_network
+    ports:
+      - "5003:5000"
+    environment:
+      - NODE_ID=3
+      - PEERS=http://node1:5000,http://node2:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node4:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node4
+    networks:
+      - blockchain_network
+    ports:
+      - "5004:5000"
+    environment:
+      - NODE_ID=4
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node5:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node5
+    networks:
+      - blockchain_network
+    ports:
+      - "5005:5000"
+    environment:
+      - NODE_ID=5
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node6:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node6
+    networks:
+      - blockchain_network
+    ports:
+      - "5006:5000"
+    environment:
+      - NODE_ID=6
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node7:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node7
+    networks:
+      - blockchain_network
+    ports:
+      - "5007:5000"
+    environment:
+      - NODE_ID=7
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node8:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node8
+    networks:
+      - blockchain_network
+    ports:
+      - "5008:5000"
+    environment:
+      - NODE_ID=8
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node9:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node9
+    networks:
+      - blockchain_network
+    ports:
+      - "5009:5000"
+    environment:
+      - NODE_ID=9
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node10:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node10
+    networks:
+      - blockchain_network
+    ports:
+      - "5010:5000"
+    environment:
+      - NODE_ID=10
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node11:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node11
+    networks:
+      - blockchain_network
+    ports:
+      - "5011:5000"
+    environment:
+      - NODE_ID=11
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node12:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node12
+    networks:
+      - blockchain_network
+    ports:
+      - "5012:5000"
+    environment:
+      - NODE_ID=12
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node13:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node13
+    networks:
+      - blockchain_network
+    ports:
+      - "5013:5000"
+    environment:
+      - NODE_ID=13
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node14:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node14
+    networks:
+      - blockchain_network
+    ports:
+      - "5014:5000"
+    environment:
+      - NODE_ID=14
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node15:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node15
+    networks:
+      - blockchain_network
+    ports:
+      - "5015:5000"
+    environment:
+      - NODE_ID=15
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node16:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node16
+    networks:
+      - blockchain_network
+    ports:
+      - "5016:5000"
+    environment:
+      - NODE_ID=16
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node17:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node17
+    networks:
+      - blockchain_network
+    ports:
+      - "5017:5000"
+    environment:
+      - NODE_ID=17
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node18:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node18
+    networks:
+      - blockchain_network
+    ports:
+      - "5018:5000"
+    environment:
+      - NODE_ID=18
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node19:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node19
+    networks:
+      - blockchain_network
+    ports:
+      - "5019:5000"
+    environment:
+      - NODE_ID=19
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node20:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node20
+    networks:
+      - blockchain_network
+    ports:
+      - "5020:5000"
+    environment:
+      - NODE_ID=20
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node21:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node21
+    networks:
+      - blockchain_network
+    ports:
+      - "5021:5000"
+    environment:
+      - NODE_ID=21
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node22:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node22
+    networks:
+      - blockchain_network
+    ports:
+      - "5022:5000"
+    environment:
+      - NODE_ID=22
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node23:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node23
+    networks:
+      - blockchain_network
+    ports:
+      - "5023:5000"
+    environment:
+      - NODE_ID=23
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node24:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node24
+    networks:
+      - blockchain_network
+    ports:
+      - "5024:5000"
+    environment:
+      - NODE_ID=24
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node25:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node25
+    networks:
+      - blockchain_network
+    ports:
+      - "5025:5000"
+    environment:
+      - NODE_ID=25
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node26:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node26
+    networks:
+      - blockchain_network
+    ports:
+      - "5026:5000"
+    environment:
+      - NODE_ID=26
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node27:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node27:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node27
+    networks:
+      - blockchain_network
+    ports:
+      - "5027:5000"
+    environment:
+      - NODE_ID=27
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node28:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node28:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node28
+    networks:
+      - blockchain_network
+    ports:
+      - "5028:5000"
+    environment:
+      - NODE_ID=28
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node29:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node29:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node29
+    networks:
+      - blockchain_network
+    ports:
+      - "5029:5000"
+    environment:
+      - NODE_ID=29
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node30:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+  node30:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: node30
+    networks:
+      - blockchain_network
+    ports:
+      - "5030:5000"
+    environment:
+      - NODE_ID=30
+      - PEERS=http://node1:5000,http://node2:5000,http://node3:5000,http://node4:5000,http://node5:5000,http://node6:5000,http://node7:5000,http://node8:5000,http://node9:5000,http://node10:5000,http://node11:5000,http://node12:5000,http://node13:5000,http://node14:5000,http://node15:5000,http://node16:5000,http://node17:5000,http://node18:5000,http://node19:5000,http://node20:5000,http://node21:5000,http://node22:5000,http://node23:5000,http://node24:5000,http://node25:5000,http://node26:5000,http://node27:5000,http://node28:5000,http://node29:5000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      retries: 5
+
+networks:
+  blockchain_network:
+    driver: bridge
